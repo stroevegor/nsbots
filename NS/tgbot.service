@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=egor
+Group=egor
+
+WorkingDirectory=/home/egor/nsbots/
+Environment="PYTHONPATH=/home/egor/nsbots/"
+ExecStart=/home/egor/nsbots/.venv/bin/python /home/egor/nsbots/NS/main.py
+
+[Install]
+WantedBy=multi-user.target
